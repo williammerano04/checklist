@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Website Migration Checklist</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+      width: 400px;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+    section {
+      margin-bottom: 25px;
+      border-left: 4px solid #2980b9;
+      padding-left: 15px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: #c0392b;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Website Build & Migration Checklist</h1>
+
+  <button onclick="clearAllChecks()">Clear All Checks</button>
+
+  <section>
+    <h2>Freshdesk Ticket Preparation</h2>
+    <ul>
+ <li>
+  <input type="checkbox" id="chk4">
+  <a href="https://docs.google.com/spreadsheets/d/1ArbnUQ1fARPFL699gpl8Cmg58aDwAIg9xxsd19vvyQU/edit?gid=0#gid=0" target="_blank">
+    Check for assigned Ticket Number in Tracker
+  </a>
+</li>
+
+ <li>
+  <input type="checkbox" id="chk4">
+  <a href="https://townsquare.freshdesk.com/a/dashboard/default" target="_blank">
+    Login to Freshdesk
+  </a>
+</li>
+      <li><input type="checkbox" id="chk1">Assign the parent ticket to your name</li>
+      <li><input type="checkbox" id="chk2">Assign the child ticket to your name</li>
+      <li><input type="checkbox" id="chk3">Set Child ticket status to "In Progress"</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>CAP - Create Site</h2>
+    <ul>
+     <li>
+  <input type="checkbox" id="chk4">
+  <a href="https://dms.townsquareinteractive.com/tsi/admin/portal/site-creation" target="_blank">
+    Login to CAP
+  </a>
+</li>
+      <li><input type="checkbox" id="chk5">Search client via GPID (e.g., TI SPARKL035) or Business Name</li>
+      <li><input type="checkbox" id="chk6">Action: Create Site using correct template from the ticket</li>
+      <li><input type="checkbox" id="chk7">Set subdomain using business name (e.g., SparklingHomes)</li>
+<li><input type="checkbox" id="chk8">Go to builder and verify site creation</li>
+ <li>
+  <input type="checkbox" id="chk4">
+  <a href="https://townsquareinteractive.responsivewebsitebuilder.io/home/dashboard/sites" target="_blank">
+    Check Builder
+  </a>
+</li>
+      
+    </ul>
+  </section>
+
+  <section>
+    <h2>Builder Tasks</h2>
+    <ul>
+      <li><input type="checkbox" id="chk9">Start with fresh backup (new_build_JCR)</li>
+      <li><input type="checkbox" id="chk10">Edit Parent Ticket: Add Home Builder URL and Preview URL</li>
+      <li>Add Note to Child Ticket with:
+        <ul>
+          <li><input type="checkbox" id="chk11">Builder Link</li>
+          <li><input type="checkbox" id="chk12">Preview Link</li>
+        </ul>
+      </li>
+      <li><input type="checkbox" id="chk13">Setup Content and Theme</li>
+      <li><input type="checkbox" id="chk14">Setup VCITA</li>
+ <li>
+  <input type="checkbox" id="chk4">
+  <a href="https://operator.vcita.com/management/login#/login" target="_blank">
+    Login to VCITA
+  </a>
+</li>
+      <li><input type="checkbox" id="chk15">Modify Template: Use info and content from the ticket</li>
+      <li><input type="checkbox" id="chk16">Business Address: Set to No (do not input address) do not include google maps</li>      
+      <li><input type="checkbox" id="chk17">GBP Creation: Hide section from site</li>
+      <li><input type="checkbox" id="chk18">GBP Suspended: Hide section from site</li>
+      <li><input type="checkbox" id="chk19">GBP Verification: Leave section visible</li>
+      <li><input type="checkbox" id="chk20">*anything that is took from any site considered as page migration.example. Fb,IG, googel reviews, etc.</li>
+      <li><input type="checkbox" id="chk21">Check ticket for client logo, colors, preferences, etc.</li>
+      <li><input type="checkbox" id="chk22">Note: For long page names, create a folder for Services</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Post Build Steps</h2>
+    <ul>
+      <li><input type="checkbox" id="chk23">Site backup end (end_build_JCR)</li>
+      <li><input type="checkbox" id="chk24">Internal QA(reminder: Do not Open Builder while under QA)
+ <a href="https://docs.google.com/spreadsheets/d/1ArbnUQ1fARPFL699gpl8Cmg58aDwAIg9xxsd19vvyQU/edit?gid=0#gid=0" target="_blank">
+    Tracker
+  </a></li>
+      <li>Parent Ticket:
+        <ul>
+          <li><input type="checkbox" id="chk25">Add Note</li>
+          <li><input type="checkbox" id="chk26">Insert QA Canned Response</li>
+          <li><input type="checkbox" id="chk27">Add Dev Note</li>
+        </ul>
+      </li>
+      <li>Child Ticket:
+        <ul>
+          <li><input type="checkbox" id="chk28">Update Status from "In Progress" to "Resolved"</li>
+          <li><input type="checkbox" id="chk29">Add migrated # and total page count</li>
+          <li><input type="checkbox" id="chk30">Update Ticket</li>
+        </ul>
+      </li>
+    </ul>
+<section>
+    <h2>Reminder</h2>
+    <ul>
+      <li><input type="checkbox" id="chk23">Do not Open Website Builder if its in Extarnal QA Process</li>
+	</ul>
+  </section>
+
+  <script>
+    // Restore checkbox states
+    window.onload = () => {
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      checkboxes.forEach(checkbox => {
+        const id = checkbox.id;
+        const saved = localStorage.getItem(id);
+        checkbox.checked = saved === "true";
+        checkbox.addEventListener("change", () => {
+          localStorage.setItem(id, checkbox.checked);
+        });
+      });
+    };
+
+    // Clear all checks and localStorage
+    function clearAllChecks() {
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      checkboxes.forEach(cb => {
+        cb.checked = false;
+        localStorage.setItem(cb.id, false);
+      });
+    }
+  </script>
+
+</body>
+</html>
